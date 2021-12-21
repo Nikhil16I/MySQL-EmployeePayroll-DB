@@ -31,7 +31,7 @@ Commit- Retriving All Added Data To Employee Payroll
 ->  select * from employee_payroll;
 
 ---------------*-----*---------------*-----*-------------------
-UC-5-->
+UC-5--> Retriving Salary Data For Particular Employee
 
 Commit- 
 
