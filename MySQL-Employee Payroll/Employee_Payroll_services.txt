@@ -1,0 +1,65 @@
+UC-1-->
+
+Commit- Creating A Payroll Service DataBase
+
+-> create database Payroll_services;
+-> show databases;
+-> use Payroll_services;
+
+---------------*-----*---------------*-----*-------------------
+UC-2-->
+
+Commit- Creating a Table Employee Payroll in the Payroll Services
+
+-> create table Employee_payroll(id int Primary Key AUTO_INCREMENT,Name varchar(100) ,Salary int,Start_Date DATE);
+-> Desc employee_payroll;
+
+---------------*-----*---------------*-----*-------------------
+UC-3-->
+
+Commit- Creating Employee PayrollData in Payroll Services
+
+->  insert into employee_payroll values (1 ,' Nikhil I',40000,'2021-12-20');
+->  insert into employee_payroll values (2 ,' Adesh Jain',45000,'2021-12-21');
+->  insert into employee_payroll values (3 ,' Rajat Patel ',30000,'2021-12-19');
+
+---------------*-----*---------------*-----*-------------------
+UC-4-->
+
+Commit- Retriving All Added Data To Employee Payroll
+
+->  select * from employee_payroll;
+
+---------------*-----*---------------*-----*-------------------
+UC-5-->
+
+Commit- 
+
+-> select salary From Employee_payroll where Name = ' Adesh Jain';
+-> select salary From Employee_payroll where Start_Date Between Cast('2015-01-01' As Date) And Date(Now());
+
+---------------*-----*---------------*-----*-------------------
+UC-6-->
+
+Commit-Adding Gender to Employee Payroll ,Reflecting Employee Gender 
+
+->Alter Table employee_payroll Add Column Gender Char(7);
+
+->Update employee_payroll set Gender = 'M' Where Name = ' Nikhil I';
+->Update employee_payroll set Gender = 'M' Where Name = ' Rajat Patel ';
+->Update employee_payroll set Gender = 'M' Where Name = ' Adesh Jain';
+
+---------------*-----*---------------*-----*-------------------
+UC-7-->
+
+Commit-Finding Sum,Average,Min,Max and Number of Male/Female.
+
+-> Select Sum(Salary) From employee_payroll Where Gender= 'M' Group By Gender;
+-> Select id , Avg(Salary) From employee_payroll Group By Gender;
+-> Select Name , Max(Salary) From employee_payroll Group By Gender;
+-> Select Name , Min(Salary) From employee_payroll Group By Gender;
+-> Select Count(Name) From employee_payroll Group By Gender;
+
+
+
+ 
