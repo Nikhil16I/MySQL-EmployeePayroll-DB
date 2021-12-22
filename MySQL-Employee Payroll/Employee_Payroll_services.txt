@@ -60,6 +60,41 @@ Commit-Finding Sum,Average,Min,Max and Number of Male/Female.
 -> Select Name , Min(Salary) From employee_payroll Group By Gender;
 -> Select Count(Name) From employee_payroll Group By Gender;
 
+---------------*-----*---------------*-----*-------------------
+UC-8-->
+
+Commit-Extending Table to add PhoneNumber,Address(Default),Department(Not Null)
+
+-> select* from employee_payroll ;
+-> Alter Table Employee_payroll add column PhoneNumber int;
+-> Alter Table Employee_payroll add column Address varchar(100) Default 'Maharashtra';
+-> select* from employee_payroll ;
+-> Alter Table Employee_payroll add column Department Varchar(50) Not Null;
+-> select* from employee_payroll ;
+
+---------------*-----*---------------*-----*-------------------
+UC-9-->
+
+Commit-Extending Table to add Basic Pay, Deductions, Taxable Pay, Income Tax & Net Pay
+
+-> Alter Table Employee_payroll add column BasicPay int;
+-> Alter Table Employee_payroll add column Deductions int;
+-> Alter Table Employee_payroll add column TaxablePay int;
+-> Alter Table Employee_payroll add column IncomeTax int;
+-> Alter Table Employee_payroll add column NetPay int;
+-> -> select* from employee_payroll ;
+
+---------------*-----*---------------*-----*-------------------
+UC-10-->
+
+Commit-Adding "Terisa" in Employee payroll .
+
+-> select* from employee_payroll ;
+-> Insert Into Employee_payroll Values(4,'Terisa',20000,'2020-10-22','F',787878787,'Mumbai', 'HR',20000,2000,1000,200,18000);
+-> select* from employee_payroll where Name = 'Terisa'; 
+
+
+
 
 
  
