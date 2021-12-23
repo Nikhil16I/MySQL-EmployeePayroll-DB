@@ -90,8 +90,10 @@ UC-10-->
 Commit-Adding "Terisa" in Employee payroll .
 
 -> select* from employee_payroll ;
--> Insert Into Employee_payroll Values(4,'Terisa',20000,'2020-10-22','F',787878787,'Mumbai', 'HR',20000,2000,1000,200,18000);
--> select* from employee_payroll where Name = 'Terisa'; 
+-> Insert Into Employee_payroll Values(4,'Terisa',20000,'2020-10-22','F',787878787,'Sales', 'Mumbai',20000,2000,1000,200,18000);
+-> select* from employee_payroll where id = 4; 
+-> Insert Into Employee_payroll Values(5,'Terisa',20000,'2020-10-22','F',787878787,''Marketing','Mumbai',20000,2000,1000,200,18000);
+-> select* from employee_payroll where id = 5; 
 
 
 
